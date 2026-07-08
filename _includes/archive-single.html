@@ -41,7 +41,29 @@
         {% if post.collection == 'teaching' %}
           <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif post.collection == 'publications' %}
+          {% if post.authors %}
+            {% assign auths = post.authors | split: ", " %}
+            {% assign highlight_name = site.author.name | default: site.name %}
+            {% assign highlight_last = highlight_name | split: ' ' | last %}
+            <p class="archive__item-authors">
+              {% for a in auths %}
+                {% assign a_trim = a | strip %}
+                {% if a_trim contains highlight_name or a_trim contains highlight_last %}
+                  <span class="author-highlight">{{ a_trim }}</span>
+                {% else %}
+                  {{ a_trim }}
+                {% endif %}{% if forloop.last == false %}, {% endif %}
+              {% endfor %}
+            </p>
+          {% endif %}
+          {% assign venue_lc = post.venue | default: '' | downcase %}
+          {% assign paperurl_lc = post.paperurl | default: '' | downcase %}
+          <!-- Mention arxiv link, but don't prefix with published -->
+          {% if venue_lc contains 'arxiv' or paperurl_lc contains 'arxiv' %}
+            <p>{{post.venue}}</p>
+          {% elsif post.venue and post.date %}
           <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+          {% endif %}
         {% elsif post.date %}
          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
         {% endif %}

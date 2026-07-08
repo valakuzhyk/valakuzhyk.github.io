@@ -1,0 +1,22 @@
+.author-highlight {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* Compact publication entry spacing */
+.archive__item {
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
+  line-height: 1.15;
+
+  .archive__item-title {
+    margin-bottom: 0.125em;
+    color: #b60000;
+  }
+
+  p, .page__meta, .archive__item-authors {
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+    line-height: 1.15;
+  }
+}
