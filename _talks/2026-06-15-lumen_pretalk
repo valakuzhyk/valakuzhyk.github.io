@@ -1,0 +1,13 @@
+---
+title: "From Unreliable to Trustworthy: Designing LLM-assisted Workflows for Exposing Malware’s Hidden Behaviors"
+collection: talks
+type: "Talk"
+permalink: https://sec.cs.ucl.ac.uk/seminars/
+venue: "University College London Information Security Seminar"
+date: 2026-06-15
+location: "London, United Kingdom"
+---
+
+Malware increasingly hides its most damaging behaviors, exposing only a controlled surface to analysis systems. Existing approaches for revealing concealed functionality often rely on expensive path exploration or narrowly targeted heuristics, leaving analysts to manually determine how to expose hidden behavior. Although large language models (LLMs) offer new opportunities to assist malware analysis, directly applying them to reverse engineering tasks frequently produces unreliable or inconsistent results. This talk will cover the development of LUMEN, an LLM-assisted framework that identifies critical decision points that suppress malicious activity and then exposes behaviors hidden from sandbox execution, finding 4x more hidden behaviors in real-world malware than specialized tools... 
+
+<!-- Beyond our quantitative results, we will contrast key trade-offs between LLM-based reasoning and symbolic execution that motivated our work, while also unpacking the reservations professional malware analysts shared with us about trusting the output of LLM-led malware analysis. Experiences like these led us to actionable design principles for building dependable LLM-assisted workflows that ground their analysis in the same data human experts rely on. Finally, we will examine the limitations of our current approach, specifically highlighting how automated decision-making can break down in agentic settings -->
