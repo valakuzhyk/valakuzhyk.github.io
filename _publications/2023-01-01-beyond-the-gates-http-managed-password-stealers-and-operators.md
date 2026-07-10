@@ -11,5 +11,6 @@ citation:
 paperurl: 
 slidesurl: 
 bibtexurl: 
+topics: "Malware Analysis, Threat Intelligence"
 ---
 

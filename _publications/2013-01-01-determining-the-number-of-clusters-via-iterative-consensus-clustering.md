@@ -13,4 +13,5 @@ authors: "C Meyer, S Race, K Valakuzhy"
 citation: 
 slidesurl: 
 bibtexurl: 
+topics: "Clustering, Consensus Learning, Data Mining"
 ---

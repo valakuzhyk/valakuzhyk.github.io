@@ -14,4 +14,5 @@ citation:
 paperurl: 
 slidesurl: 
 bibtexurl: 
+topics: "Automotive Security, Hardware Trojans"
 ---
