@@ -9,7 +9,7 @@ venue: '35th USENIX Security Symposium'
 doi:
 paperurl: 
 pages: 
-authors: "T Galloway, K Valakuzhy, M Antonakakis, and F Monrose"
+authors: "T Galloway, K Valakuzhy, M Antonakakis, F Monrose"
 citation:
 paperurl: 
 slidesurl: 
