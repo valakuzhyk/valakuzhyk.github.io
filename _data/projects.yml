@@ -1,0 +1,159 @@
+- id: lumen
+  name: LUMEN
+  category: LLM workflows & empirical evaluation
+  headline: "Principled workflow design for LLM-assisted malware analysis."
+  summary: >-
+    LUMEN helps analysts recover malware behaviors missed by sandboxes. Its
+    design draws on research, industry best practices, and interviews with five
+    experienced malware analysts. The workflow combines execution evidence with
+    disassembled code, gives models bounded tasks, and verifies their outputs
+    using existing analysis tools.
+  image: /images/work/lumen-figure.webp
+  image_full: /images/work/lumen-figure.png
+  image_alt: "Figure 2 from the LUMEN paper: context preparation, locating decision points, filtering and correction, and constructing automated or manual activation methods."
+  image_caption: "LUMEN architecture"
+  image_source: /files/lumen.pdf#page=4
+  image_source_label: Paper, Figure 2
+  highlight: "Severe activity uncovered in 68% of evaluated samples that previously showed none"
+  approach: >-
+    Five principles guide the design: use domain-specific tools, curate
+    task-specific context, generate diverse candidate outputs, reduce task
+    scope, and verify results at multiple stages. LUMEN applies these principles
+    to locating decision points and constructing activation methods, checking
+    proposed decision points against supplied evidence and testing activation
+    methods in a dynamic analysis environment.
+  significance: >-
+    The evaluation covered samples from 22 malware families with behaviors
+    missed by sandboxes. The complete LUMEN workflow enabled CAPE to uncover
+    severe malicious activity in 68% of evaluated samples that previously showed
+    none. LUMEN complements existing sandboxes by constructing methods that
+    activate hidden behavior.
+  links:
+    - label: Read the paper
+      url: /files/lumen.pdf
+    - label: Research talk
+      url: /talks/
+
+- id: braid
+  name: BRAID
+  category: Malware identification with few examples
+  headline: Identify malware families from few labeled examples.
+  summary: >-
+    Identifying malware families is difficult when only a few labeled examples
+    are available. BRAID improves identification in this setting by comparing
+    the code that implements observed behaviors. These implementation-level
+    relationships help connect related samples and distinguish malware that
+    exhibits similar high-level behavior but belongs to different families.
+  image: /images/work/braid-figure.webp
+  image_full: /images/work/braid-figure.png
+  image_alt: "Figure 1 from the BRAID paper: sandbox execution, memory snapshots, behavior-anchor identification, implementation extraction, and function-based clustering."
+  image_caption: "BRAID workflow"
+  image_source: /files/braid.pdf#page=6
+  image_source_label: Paper, Figure 1
+  highlight: "More effective family identification with one labeled example per family"
+  approach: >-
+    Using sandbox artifacts, BRAID links malware samples through shared behavior
+    implementations and uses those relationships to propagate family labels
+    from a small number of known examples. Process relationships help distinguish
+    family-specific logic from components reused across families.
+  significance: >-
+    The paper evaluates family identification with one labeled sample per family,
+    including experiments spanning up to 153 families. BRAID achieves more than
+    twice the macro F1 of the compared baseline on supported samples. These
+    results demonstrate improved identification effectiveness when labeled
+    examples are scarce.
+  links:
+    - label: Read the paper
+      url: /files/braid.pdf
+    - label: Patent application · US20260147888A1
+      url: https://patents.google.com/patent/US20260147888A1/en
+
+- id: zelos
+  name: Zelos
+  category: Emulation & instrumentation
+  headline: A programmable platform for binary analysis.
+  summary: >-
+    Zelos provides a programmable environment for executing and inspecting Linux
+    binaries across x86, ARM, and MIPS. It combines CPU and operating-system
+    emulation with Python interfaces for tracing execution and building analysis
+    plugins. The platform supports malware unpacking, behavior analysis, and
+    crash investigation through shared instrumentation. It has also supported
+    published research on IoT malware, compiler provenance, and crash diagnosis.
+  image: /images/work/zelos-demo.webp
+  image_full: /images/work/zelos-demo.webp
+  image_alt: "Zelos terminal output from the repository demonstration, showing emulated system calls while running an ARM Linux binary."
+  image_caption: "Terminal output from the Zelos demonstration"
+  image_source: https://github.com/zeropointdynamics/zelos
+  image_source_label: Zelos repository
+  highlight: "Used in USENIX Security, USENIX ATC, and ACM CODASPY research"
+  approach: >-
+    Unicorn provides CPU emulation, while Zelos implements the operating-system
+    behavior needed to run the binary. Analysts can inspect instructions and
+    system calls from the command line or use Python to control execution and
+    attach analyses to runtime events.
+  significance: >-
+    These research applications use the same programmable execution platform
+    to collect different kinds of evidence: system-call traces for malware
+    behavior analysis, instruction-level register changes for compiler
+    provenance analysis, and dataflow dependencies for crash diagnosis.
+  research_uses:
+    - title: "The Circle Of Life: A Large-Scale Study of The IoT Malware Lifecycle"
+      venue: USENIX Security 2021
+      url: https://www.usenix.org/conference/usenixsecurity21/presentation/alrawi-circle
+      description: >-
+        Zelos generated system-call traces for IoT malware and supported
+        comparison with full-system execution.
+    - title: Automatic Recovery of Fine-grained Compiler Artifacts at the Binary Level
+      venue: USENIX ATC 2022
+      url: https://www.usenix.org/conference/atc22/presentation/du
+      description: >-
+        PassTell used Zelos to emulate individual functions and record
+        per-instruction register changes as dynamic features for
+        compiler-provenance analysis.
+    - title: "CrashTalk: Automated Generation of Precise, Human Readable, Descriptions of Software Security Bugs"
+      venue: ACM CODASPY 2024
+      url: https://doi.org/10.1145/3626232.3653256
+      description: >-
+        CrashTalk uses Zelos and its crashd plugin for dataflow analysis,
+        supporting automated descriptions of software security bugs, their
+        weakness types, and severity.
+  links:
+    - label: Source code
+      url: https://github.com/zeropointdynamics/zelos
+    - label: Documentation
+      url: https://zelos.readthedocs.io/en/latest/README.html
+    - label: Black Hat presentation
+      url: https://blackhat.com/us-20/arsenal/schedule/#zelos-applying-emulation-to-cross-architecture-root-cause-analysis-21066
+
+- id: crashd
+  name: crashd
+  category: Dataflow & crash investigation
+  headline: Trace a crash through the data that led to it.
+  summary: >-
+    A crash location can be far removed from the operations that produced the
+    failure. Built on Zelos, crashd uses execution tracing, dataflow analysis,
+    and memory sanitization to investigate those dependencies. Its companion
+    VS Code visualizer connects the analysis to source locations and runtime
+    values, helping analysts inspect the path to a fault.
+  image: /images/work/crashd-visualizer.webp
+  image_full: /images/work/crashd-visualizer.webp
+  image_alt: "The crashd VS Code visualizer showing source-code highlighting beside the dataflow graph for a crashing program."
+  image_caption: "Source highlighting and dataflow in the crashd visualizer"
+  image_source: https://github.com/zeropointdynamics/vscode-crashd
+  image_source_label: Visualizer repository
+  highlight: "Inspect data dependencies alongside source and runtime values"
+  approach: >-
+    crashd tracks dataflow during emulated execution and reports dependencies
+    associated with the crash. The visualizer highlights the crash site and
+    relevant executed source lines, with graph nodes linked to source locations.
+  significance: >-
+    Analysts can explore the dependency graph, inspect inline runtime values,
+    and follow dataflow over time. These outputs provide concrete evidence for
+    investigating how earlier operations relate to the observed failure.
+  links:
+    - label: Source code
+      url: https://github.com/zeropointdynamics/zelos-crashd
+    - label: VS Code visualizer
+      url: https://github.com/zeropointdynamics/vscode-crashd
+    - label: Reproducible examples
+      url: https://github.com/zeropointdynamics/examples-crashd
