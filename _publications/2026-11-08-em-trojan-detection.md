@@ -11,7 +11,7 @@ pages:
 localurl: ""
 authors: "A Moschos, BB Yilmaz, K Valakuzhy, AD Keromytis"
 citation:
-paperurl: 
+paperurl: 'https://0ena.github.io/papers/ICECS2026.pdf'
 slidesurl: 
 bibtexurl: 
 topics: "Hardware Trojans"

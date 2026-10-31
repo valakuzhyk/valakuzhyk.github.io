@@ -112,7 +112,7 @@
         compiler-provenance analysis.
     - title: "CrashTalk: Automated Generation of Precise, Human Readable, Descriptions of Software Security Bugs"
       venue: ACM CODASPY 2024
-      url: https://doi.org/10.1145/3626232.3653256
+      url: https://fabianmonrose.github.io/papers/crashtalk.pdf
       description: >-
         CrashTalk uses Zelos and its crashd plugin for dataflow analysis,
         supporting automated descriptions of software security bugs, their
@@ -122,8 +122,8 @@
       url: https://github.com/zeropointdynamics/zelos
     - label: Documentation
       url: https://zelos.readthedocs.io/en/latest/README.html
-    - label: Black Hat presentation
-      url: https://blackhat.com/us-20/arsenal/schedule/#zelos-applying-emulation-to-cross-architecture-root-cause-analysis-21066
+    - label: Black Hat talk & demo
+      url: /talks/2020-08-05-zelos/
 
 - id: crashd
   name: crashd
