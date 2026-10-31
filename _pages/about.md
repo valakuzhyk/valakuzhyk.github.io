@@ -8,6 +8,10 @@ excerpt: "Kevin Valakuzhy builds systems for binary analysis, root-cause diagnos
 redirect_from: 
   - /about/
   - /about.html
+  - /cv
+  - /cv/
+  - /resume
+  - /resume/
 ---
 
 <section class="portfolio-intro" aria-labelledby="intro-title">
