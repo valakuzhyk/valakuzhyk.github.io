@@ -113,7 +113,7 @@
       venue: ACM CODASPY 2024
       url: https://fabianmonrose.github.io/papers/crashtalk.pdf
       description: >-
-        CrashTalk uses Zelos and its crashd plugin for dataflow analysis,
+        CrashTalk uses Zelos and its crasHD plugin for dataflow analysis,
         supporting automated descriptions of software security bugs, their
         weakness types, and severity.
   links:
@@ -125,24 +125,24 @@
       url: /talks/2020-08-05-zelos/
 
 - id: crashd
-  name: crashd
+  name: crasHD
   category: Dataflow & crash investigation
   headline: Trace a crash through the data that led to it.
   summary: >-
     A crash location can be far removed from the operations that produced the
-    failure. Built on Zelos, crashd uses execution tracing, dataflow analysis,
+    failure. Built on Zelos, crasHD uses execution tracing, dataflow analysis,
     and memory sanitization to investigate those dependencies. Its companion
     VS Code visualizer connects the analysis to source locations and runtime
     values, helping analysts inspect the path to a fault.
   image: /images/work/crashd-visualizer.webp
   image_full: /images/work/crashd-visualizer.webp
-  image_alt: "The crashd VS Code visualizer showing source-code highlighting beside the dataflow graph for a crashing program."
-  image_caption: "Source highlighting and dataflow in the crashd visualizer"
+  image_alt: "The crasHD VS Code visualizer showing source-code highlighting beside the dataflow graph for a crashing program."
+  image_caption: "Source highlighting and dataflow in the crasHD visualizer"
   image_source: https://github.com/zeropointdynamics/vscode-crashd
   image_source_label: Visualizer repository
   highlight: "Inspect data dependencies alongside source and runtime values"
   approach: >-
-    crashd tracks dataflow during emulated execution and reports dependencies
+    crasHD tracks dataflow during emulated execution and reports dependencies
     associated with the crash. The visualizer highlights the crash site and
     relevant executed source lines, with graph nodes linked to source locations.
   significance: >-
