@@ -32,7 +32,6 @@ redirect_from:
 <section class="selected-work" aria-labelledby="selected-work">
   <div class="work-section-heading">
     <h2 id="selected-work">Selected work</h2>
-    <p>Execution, evidence, and practical security analysis.</p>
   </div>
   <div class="work-grid">
     {% for project in site.data.projects %}

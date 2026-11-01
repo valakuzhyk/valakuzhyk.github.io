@@ -19,15 +19,14 @@
     Five principles guide the design: use domain-specific tools, curate
     task-specific context, generate diverse candidate outputs, reduce task
     scope, and verify results at multiple stages. LUMEN applies these principles
-    to locating decision points and constructing activation methods, checking
-    proposed decision points against supplied evidence and testing activation
-    methods in a dynamic analysis environment.
+    to locate code responsible for hiding malware's behaviors under analysis,
+    and identify environmental modifications to activate those behaviors.
   significance: >-
     The evaluation covered samples from 22 malware families with behaviors
-    missed by sandboxes. The complete LUMEN workflow enabled CAPE to uncover
-    severe malicious activity in 68% of evaluated samples that previously showed
-    none. LUMEN complements existing sandboxes by constructing methods that
-    activate hidden behavior.
+    missed by sandboxes. The complete LUMEN workflow enabled the open-source
+    CAPE sandbox to uncover severe malicious activity in 68% of evaluated
+    samples that previously showed none. LUMEN complements existing sandboxes
+    by creating sample-specific environments designed to elicit behavior.
   links:
     - label: Read the paper
       url: /files/lumen.pdf
