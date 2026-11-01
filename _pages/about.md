@@ -21,7 +21,6 @@ redirect_from:
     <p class="portfolio-bio">I am Kevin Valakuzhy, a PhD candidate at the Georgia Institute of Technology advised by <a href="https://fabianmonrose.github.io/">Fabian Monrose</a>. Before graduate school, I worked as a software engineer at Google and Zeropoint Dynamics. My research focuses on building systems that make binary code analysis more scalable and reliable.</p>
     <div class="portfolio-contact" aria-label="Contact and profiles">
       <a href="mailto:{{ site.author.email }}">Email <span aria-hidden="true">↗</span></a>
-      <a href="https://github.com/{{ site.author.github }}">GitHub <span aria-hidden="true">↗</span></a>
       <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}/">LinkedIn <span aria-hidden="true">↗</span></a>
       <a href="{{ site.author.googlescholar }}">Google Scholar <span aria-hidden="true">↗</span></a>
     </div>
